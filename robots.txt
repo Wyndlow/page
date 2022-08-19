@@ -1,1 +1,1 @@
-Sitemap: https://jeremiahp.github.io/page/CNAME/sitemap.xml
+Sitemap: https://wyndlow.github.io/page/sitemap.xml
