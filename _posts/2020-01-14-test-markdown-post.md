@@ -100,5 +100,3 @@ key: value
 
 
 [^1]: This is the footnote.
-
-# Test
