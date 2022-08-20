@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Java",
             "content": "System.out.println(&quot;Hello&quot;) . Hello .",
             "url": "https://wyndlow.github.io/page/2022/08/20/javapart.html",
             "relUrl": "/2022/08/20/javapart.html",
@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "IDK",
             "content": "print(&quot;Hello&quot;) . Hello World .",
             "url": "https://wyndlow.github.io/page/2022/08/20/idk.html",
             "relUrl": "/2022/08/20/idk.html",
