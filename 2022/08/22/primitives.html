@@ -151,28 +151,82 @@ Hard Coded: Variables are predetermined and unchangeable outside of the code.</p
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataCollection</span><span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Name</span><span class="p">(){</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MedicalRecord</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">name</span><span class="p">(){</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">inputName</span> <span class="o">=</span> <span class="s">&quot;temp&quot;</span><span class="p">;</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input name of patient:&quot;</span><span class="p">);</span>
         <span class="k">try</span> <span class="p">{</span>
-            <span class="n">String</span> <span class="n">inputName</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">inputName</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not a valid name, &quot;</span> <span class="o">+</span><span class="n">e</span><span class="p">);</span>
     
         <span class="p">}</span>
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">inputName</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MedicalRecord</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">age</span><span class="p">(){</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">inputAge</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input age of patient:&quot;</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">inputAge</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not a valid age, &quot;</span> <span class="o">+</span><span class="n">e</span><span class="p">);</span>
+    
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">inputAge</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">weight</span><span class="p">(){</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="kt">float</span> <span class="n">inputWeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input weight of patient:&quot;</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">inputWeight</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not a valid weight, &quot;</span> <span class="o">+</span><span class="n">e</span><span class="p">);</span>
+    
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">inputWeight</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">insurance</span><span class="p">(){</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">inputInsurance</span> <span class="o">=</span> <span class="n">unknown</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input weight of patient:&quot;</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">inputInsurance</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not true or false, &quot;</span> <span class="o">+</span><span class="n">e</span><span class="p">);</span>
+    
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">inputInsurance</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="n">String</span> <span class="n">patient</span> <span class="o">=</span> <span class="n">inputName</span><span class="p">;</span>
+        <span class="n">MedicalRecord</span> <span class="n">record</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MedicalRecord</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">name</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">age</span><span class="p">();</span>
+        <span class="kt">float</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">weight</span><span class="p">();</span>
+        <span class="kt">boolean</span> <span class="n">insured</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">insurance</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span> <span class="o">+</span> <span class="n">age</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight &quot;</span> <span class="o">+</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insured: &quot;</span> <span class="o">+</span> <span class="n">insured</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">DataCollection</span><span class="p">.</span><span class="na">Name</span><span class="p">();</span>
 <span class="n">MedicalRecord</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
@@ -187,6 +241,14 @@ Hard Coded: Variables are predetermined and unchangeable outside of the code.</p
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Input name of patient:
+Input age of patient:
+Input weight of patient:
+Input weight of patient:
+Not true or false, java.util.InputMismatchException
+Name: Ahh
+Age: 202
+Weight 1.2
+Insured: false
 </pre>
 </div>
 </div>
