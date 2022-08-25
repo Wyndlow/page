@@ -65,7 +65,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/page/search/">Search</a><a class="page-link" href="/page/about/">About Me</a><a class="page-link" href="/page/categories/">Tags</a><a class="page-link" href="/page/notes/">Notes</a></div>
+        <div class="trigger"><a class="page-link" href="/page/search/">Search</a><a class="page-link" href="/page/about/">About Me</a><a class="page-link" href="/page/categories/">Tags</a><a class="page-link" href="/page/notes/">Notes</a><a class="page-link" href="/page/tools/">Tools</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -136,7 +136,7 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MedicalRecord</span><span class="p">{</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">name</span><span class="p">(){</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">name</span><span class="p">(){</span> <span class="c1">//String is used here, because a name is a array of characters, therefore making String the most convenient to capture a name</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span> <span class="c1">//Creates new scanner object</span>
         <span class="n">String</span> <span class="n">inputName</span> <span class="o">=</span> <span class="s">&quot;N/a&quot;</span><span class="p">;</span> <span class="c1">//Initializes inputName as a String wrapper class.</span>
@@ -151,7 +151,7 @@ window.onload = wrap_img;
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span> <span class="c1">//Closes input</span>
         <span class="k">return</span> <span class="n">inputName</span><span class="p">;</span> <span class="c1">//Returns String inputName</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">age</span><span class="p">(){</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">age</span><span class="p">(){</span> <span class="c1">//An age is typically counted in whole numbers. So is an integer, therefore making it the best to use.</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">inputAge</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//Initializes integer inputAge as 0</span>
@@ -166,7 +166,7 @@ window.onload = wrap_img;
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
         <span class="k">return</span> <span class="n">inputAge</span><span class="p">;</span> <span class="c1">//returns integer inputAge</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">weight</span><span class="p">(){</span>
+    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">weight</span><span class="p">(){</span> <span class="c1">//Weight is often caught using 2 decimal points and will typically only be 5 numbers, a float has a precision of 7 making it suitable to capture weight.</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="kt">float</span> <span class="n">inputWeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -181,7 +181,7 @@ window.onload = wrap_img;
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
         <span class="k">return</span> <span class="n">inputWeight</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">insurance</span><span class="p">(){</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">insurance</span><span class="p">(){</span> <span class="c1">//Status of insurance is a yes or no parameter, therefore the true or false boolean can easily contain this information.</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="kt">boolean</span> <span class="n">inputInsurance</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -196,7 +196,7 @@ window.onload = wrap_img;
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
         <span class="k">return</span> <span class="n">inputInsurance</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">condition</span><span class="p">(){</span>
+    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">condition</span><span class="p">(){</span> <span class="c1">//A person can have multiple symptoms and conditions, therefore multiple strings in the form of an ArrayList contains this data easily.</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">symptoms</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
