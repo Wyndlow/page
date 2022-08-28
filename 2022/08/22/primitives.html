@@ -298,6 +298,47 @@ Symptoms: [fhah, aafifq, qf, wf, wfq]
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">test</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">test1</span> <span class="o">=</span> <span class="mf">30.99</span><span class="p">;</span>
+
+    <span class="n">test</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">test1</span><span class="p">;</span> <span class="c1">//This type casts double test1 to an integer, forcing 30.99 to become an integer, losing the .99.</span>
+    <span class="c1">//This type of code would be useful when you need a whole number result</span>
+    <span class="c1">//but input can be of type double or float.</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
