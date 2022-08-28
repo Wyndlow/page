@@ -153,13 +153,18 @@ window.onload = wrap_img;
         <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">atomicNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">mols</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">while</span><span class="p">(</span><span class="n">atomicNum</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter atomic number of element, -1 to finish:&quot;</span><span class="p">);</span>
             <span class="n">atomicNum</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">atomicNum</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">sum</span> <span class="o">+=</span> <span class="n">molarMass</span><span class="p">(</span><span class="n">atomicNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter amount of element:&quot;</span><span class="p">);</span>
+                <span class="n">mols</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">molarMass</span><span class="p">(</span><span class="n">atomicNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mols</span><span class="p">);</span> <span class="c1">//This is an instance where the +=</span>
+                <span class="c1">//operator is used. This adds the value of molarMass(atomicNum-1) * mols to the already existent</span>
+                <span class="c1">//value of sum. </span>
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
@@ -186,9 +191,9 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Enter atomic number of element, -1 to finish:
+Enter amount of element:
 Enter atomic number of element, -1 to finish:
-Enter atomic number of element, -1 to finish:
-5.0106amu
+4.032 amu
 </pre>
 </div>
 </div>

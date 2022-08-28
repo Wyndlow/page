@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -185,6 +185,24 @@ window.onload = wrap_img;
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
         <span class="k">return</span> <span class="n">inputWeight</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">weight</span><span class="p">(){</span> <span class="c1">//Weight is often caught using 2 decimal points </span>
+            <span class="c1">//and will typically only be 5 numbers, a float has a precision of 7 </span>
+            <span class="c1">//making it suitable to capture weight.</span>
+            <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="kt">float</span> <span class="n">inputHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input Height of patient:&quot;</span><span class="p">);</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">inputHeight</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span>
+    
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Not a valid Height, &quot;</span> <span class="o">+</span><span class="n">e</span><span class="p">);</span>
+        
+            <span class="p">}</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">inputHeight</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">insurance</span><span class="p">(){</span> <span class="c1">//Status of insurance is a yes or no parameter, </span>
         <span class="c1">//therefore the true or false boolean can easily contain this information.</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
@@ -229,11 +247,14 @@ window.onload = wrap_img;
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">name</span><span class="p">();</span> <span class="c1">//</span>
         <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">age</span><span class="p">();</span>
         <span class="kt">float</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">weight</span><span class="p">();</span>
+        <span class="kt">float</span> <span class="n">height</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">height</span><span class="p">();</span>
         <span class="kt">boolean</span> <span class="n">insured</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">insurance</span><span class="p">();</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">symptoms</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">condition</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span> <span class="o">+</span> <span class="n">age</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight &quot;</span> <span class="o">+</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight: &quot;</span> <span class="o">+</span> <span class="n">weight</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Height: &quot;</span> <span class="o">+</span> <span class="n">height</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;BMI:&quot;</span> <span class="o">+</span> <span class="p">()</span> <span class="p">)</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insured: &quot;</span> <span class="o">+</span> <span class="n">insured</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Symptoms: &quot;</span> <span class="o">+</span> <span class="n">symptoms</span><span class="p">);</span>
     <span class="p">}</span>
