@@ -57,6 +57,17 @@
   
     
         ,"post5": {
+            "title": "Bash",
+            "content": "Basic Commands . ls: Lists computer files in Unix operating systems . cd: Navigate and change working directory . pwd: Print working directory . echo: Displays a string passed as an argument. . cat: Reads data from the file and gives its contents as output . env: Show setting for my shell . git clone: Sets up a director of files . cd $project: Allows user to move inside that directory of files . Bash Commands . . python --version python2 --version anaconda --version java --version jupyter --version jupyter kernelspec list conda list | grep &quot;jupyter&quot; . Python 3.9.12 Python 2.7.18 anaconda Command line client (version 1.9.0) openjdk 11.0.16 2022-07-19 OpenJDK Runtime Environment (build 11.0.16+8-post-Ubuntu-0ubuntu120.04) OpenJDK 64-Bit Server VM (build 11.0.16+8-post-Ubuntu-0ubuntu120.04, mixed mode, sharing) Selected Jupyter core packages... IPython : 8.2.0 ipykernel : 6.15.1 ipywidgets : 7.6.5 jupyter_client : 6.1.12 jupyter_core : 4.9.2 jupyter_server : 1.13.5 jupyterlab : 3.3.2 nbclient : 0.5.13 nbconvert : 6.4.4 nbformat : 5.3.0 notebook : 6.4.8 qtconsole : 5.3.0 traitlets : 5.1.1 Available kernels: bash /home/wyndlow/.local/share/jupyter/kernels/bash java /home/wyndlow/.local/share/jupyter/kernels/java javascript /home/wyndlow/.local/share/jupyter/kernels/javascript python3 /home/wyndlow/.local/share/jupyter/kernels/python3 jupyter 1.0.0 py39h06a4308_7 jupyter_client 6.1.12 pyhd3eb1b0_0 jupyter_console 6.4.0 pyhd3eb1b0_0 jupyter_core 4.9.2 py39h06a4308_0 jupyter_server 1.13.5 pyhd3eb1b0_0 jupyterlab 3.3.2 pyhd3eb1b0_0 jupyterlab_pygments 0.1.2 py_0 jupyterlab_server 2.10.3 pyhd3eb1b0_1 jupyterlab_widgets 1.0.0 pyhd3eb1b0_1 .",
+            "url": "https://wyndlow.github.io/page/pbl/2022/08/22/bash.html",
+            "relUrl": "/pbl/2022/08/22/bash.html",
+            "date": " • Aug 22, 2022"
+        }
+        
+    
+  
+    
+        ,"post6": {
             "title": "Python",
             "content": "print(&quot;Hello&quot;) . Hello .",
             "url": "https://wyndlow.github.io/page/2022/08/20/python.html",
@@ -67,7 +78,7 @@
     
   
     
-        ,"post6": {
+        ,"post7": {
             "title": "Java",
             "content": "Object-Oriented Programming(OOP) . An Approach to creating and using models of physical or imagined objects . Class: . A Programmer-defined blueprint from which objects are created. A blueprint for how to create an instance of itself . Attributes: Characteristics of an Object . Behaviors: Actions that an object can perform . Object: An instance of the class . Instantiate: To call the constructor to create an object . Constructor: A block of code that has the same name as the class and tells the computer how to create a new object. . Reference Variable: A variable that points to an object . State: The Attributes represented by the object&#39;s instance variables . Camel Case: . Naming convention where the first letter of the first word is upper or lowercase, and the first letter of each additional word is uppercase . Calling Methods . Methods: A named set of instructions to perform a task . Parameter: A variable in the method that defines the type of value to receive when the method is called. . Begins with the name of the object, a dot operator, name of the method, and an argument within parentheses . Dot Operator: Used to call a method in a class . Argument: Value passed to a method when the method is called. . Types of Values . Numbers: Integers, Floats, Doubles | Text: String, Characters | True or False: Boolean | Taken from CSA: Object-Oriented Programming, CSA: Creating Objects, and CSA: Calling Methods by Code.org . System.out.println(&quot;Hello&quot;); . Hello . char output = &#39;A&#39;; for (int i = 0; i &lt; 26; i++){ System.out.println(output); output++; } . A B C D E F G H I J K L M N O P Q R S T U V W X Y Z . static void test(){ System.out.println(&quot;Testing&quot;); } static void number(){ System.out.println(&quot;3&quot;); } public static void main(){ test(); number(); } main(); . Testing 3 .",
             "url": "https://wyndlow.github.io/page/jupyter/cb/pbl/2022/08/20/javapart.html",
@@ -78,7 +89,7 @@
     
   
     
-        ,"post7": {
+        ,"post8": {
             "title": "Test Markdown Page",
             "content": "Figuring it out . More test . Hacks Stuff . Some | More | Stuff | Not real code .",
             "url": "https://wyndlow.github.io/page/markdown/2022/08/20/attempt.html",
