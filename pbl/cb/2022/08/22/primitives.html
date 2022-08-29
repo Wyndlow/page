@@ -212,13 +212,11 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="n">inputWeight</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">weight</span><span class="p">(){</span> <span class="c1">//Weight is often caught using 2 decimal points </span>
-            <span class="c1">//and will typically only be 5 numbers, a float has a precision of 7 </span>
-            <span class="c1">//making it suitable to capture weight.</span>
+    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">height</span><span class="p">(){</span>
             <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
             <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
             <span class="kt">float</span> <span class="n">inputHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input Height of patient:&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input Height of patient (Centimeters):&quot;</span><span class="p">);</span>
             <span class="k">try</span> <span class="p">{</span>
                 <span class="n">inputHeight</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span>
     
@@ -278,9 +276,8 @@ window.onload = wrap_img;
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">symptoms</span> <span class="o">=</span> <span class="n">record</span><span class="p">.</span><span class="na">condition</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span> <span class="o">+</span> <span class="n">age</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight: &quot;</span> <span class="o">+</span> <span class="n">weight</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Height: &quot;</span> <span class="o">+</span> <span class="n">height</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;BMI:&quot;</span> <span class="o">+</span> <span class="p">()</span> <span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Weight: &quot;</span> <span class="o">+</span> <span class="n">weight</span> <span class="o">+</span> <span class="s">&quot; lbs.&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Height: &quot;</span> <span class="o">+</span> <span class="n">height</span> <span class="o">+</span> <span class="s">&quot; cm.&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insured: &quot;</span> <span class="o">+</span> <span class="n">insured</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Symptoms: &quot;</span> <span class="o">+</span> <span class="n">symptoms</span><span class="p">);</span>
     <span class="p">}</span>
@@ -302,6 +299,7 @@ window.onload = wrap_img;
 <pre>Input name of patient:
 Input age of patient:
 Input weight of patient:
+Input Height of patient (Centimeters):
 Input state of insurance of patient:
 Enter a Symptom, 0 to finish:
 Enter a Symptom, 0 to finish:
@@ -309,11 +307,13 @@ Enter a Symptom, 0 to finish:
 Enter a Symptom, 0 to finish:
 Enter a Symptom, 0 to finish:
 Enter a Symptom, 0 to finish:
+Enter a Symptom, 0 to finish:
 Name: A
-Age: 40
-Weight 170.7
+Age: 37
+Weight: 172.9 lbs.
+Height: 162.0 cm.
 Insured: true
-Symptoms: [fhah, aafifq, qf, wf, wfq]
+Symptoms: [Lethargy, Rash, Cough, Muscle pain, Depression, ]
 </pre>
 </div>
 </div>
